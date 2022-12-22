@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>203.移除链表元素</title>
+      <link href="/posts/10614.html"/>
+      <url>/posts/10614.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="/posts/10614/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20221222175350.png"></p><h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><p>&#96;&#96;</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">        ListNode mid = new ListNode();</span><br><span class="line">        if(head == null)&#123;//似乎多余？？？</span><br><span class="line">            return head;</span><br><span class="line">        &#125;</span><br><span class="line">        while(head.val == val &amp;&amp; head != null)&#123;</span><br><span class="line">            head = head.next;//转移头节点</span><br><span class="line">            if(head == null)&#123;</span><br><span class="line">                return head;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        mid = head;</span><br><span class="line">        while(mid.next != null)&#123;</span><br><span class="line">            if(mid.next.val == val)&#123;</span><br><span class="line">                mid.next = mid.next.next;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            mid = mid.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>缝缝补补做出</p><p>关键在第一个节点的操作上，因为我们删除一个节点是对这个节点的上一个节点进行操作</p><p>ps</p><p>1.如果节点头为空，直接返回</p><p>2.在第一节点特判时，如果为空，直接返回</p><p>3.创建中间变量对中间变量进行操作保证头节点一直是头节点</p><p>4.中间变量只是引用数据类型，会改变实际的值，但是head不变就可以</p><h2 id="大佬的思路——虚拟头节点"><a href="#大佬的思路——虚拟头节点" class="headerlink" title="大佬的思路——虚拟头节点"></a>大佬的思路——虚拟头节点</h2><p><strong>优势</strong>：在一般操作的情况下，我们删除或者增添节点的时候对头节点和其他节点的操作不同，如果使用头节点，那么我们可以使增删头节点的方式与其他节点相同，起到统一操作的作用</p><p>&#96;&#96;</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">    //重要操作</span><br><span class="line">        ListNode dummyHead = new ListNode();</span><br><span class="line">        dummyHead.next = head;</span><br><span class="line">        ListNode cur = dummyHead;</span><br><span class="line">        while(cur.next != null)&#123;</span><br><span class="line">            if(cur.next.val == val)&#123;</span><br><span class="line">                cur.next = cur.next.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>ps:</p><p>不能返回原来的头节点，因为可能已经被删除（这里应该具体研究一下），<strong>返回cur.next</strong></p><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>让所有值不等于val的节点连接成一个新的节点</p><p>有点考逻辑，但是如果用一句话来形容的话——我来组成下一个节点，感觉像拼火车？？？</p><p>这个程序给我的感觉是先全部展开，再依次收拢</p><p>&#96;&#96;</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode removeElements(ListNode head, int val) &#123;</span><br><span class="line">        if(head==null)&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        head.next=removeElements(head.next,val);//</span><br><span class="line">        if(head.val==val)&#123;//特判头节点，返回的值一定为head,只不过主体部分已经修改完毕，不对</span><br><span class="line">        //判断当前节点的值是否等于val，如果是返回下一个节点，否则返回当前节点</span><br><span class="line">            return head.next;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return head;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>链表</title>
       <link href="/posts/54862.html"/>
       <url>/posts/54862.html</url>
