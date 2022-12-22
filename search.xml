@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>707.设计链表</title>
+      <link href="/posts/61137.html"/>
+      <url>/posts/61137.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="设计链表"><a href="#设计链表" class="headerlink" title="设计链表"></a>设计链表</h1><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>[设计链表](<a href="https://leetcode.cn/problems/design-linked-list/">707. 设计链表 - 力扣（LeetCode）</a>)</p><p><img src="/posts/61137/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20221222175350.png"></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>经常用到的操作，<strong>设置中间变量</strong>，<strong>找前驱</strong>，<strong>标准操作</strong>（使用虚拟节点也是为了方便找前驱）</p><p>&#96;&#96;</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class ListNode&#123;</span><br><span class="line">    int val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode()&#123;&#125;</span><br><span class="line">    ListNode(int val)&#123;</span><br><span class="line">        this.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class MyLinkedList &#123;</span><br><span class="line">    int size;</span><br><span class="line">    ListNode head;</span><br><span class="line"></span><br><span class="line">    public MyLinkedList() &#123;</span><br><span class="line">        int size = 0;</span><br><span class="line">        head = new ListNode();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int get(int index) &#123;//获取数值</span><br><span class="line">        if(index &lt; 0 || index &gt;= size)&#123;</span><br><span class="line">            return -1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            ListNode cur = head;</span><br><span class="line">            for(int i = 0; i &lt;= index; i++)&#123;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">            return cur.val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtHead(int val) &#123;//头插</span><br><span class="line">        addAtIndex(0,val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtTail(int val) &#123;//尾插</span><br><span class="line">        addAtIndex(size,val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void addAtIndex(int index, int val) &#123;//根据下标插入</span><br><span class="line">        if(index &gt; size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        if(index &lt; 0)&#123;//我觉得这里可以return</span><br><span class="line">            index = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">        ListNode pred = head;</span><br><span class="line">        for(int i = 0; i &lt; index; i++)&#123;//细节，只要找到前一个就可以</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode toAdd = new ListNode(val);</span><br><span class="line">        //标准操作</span><br><span class="line">        toAdd.next = pred.next;</span><br><span class="line">        pred.next = toAdd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void deleteAtIndex(int index) &#123;</span><br><span class="line">        if(index &lt; 0 || index &gt;= size)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        if(index == 0)&#123;</span><br><span class="line">            head = head.next;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode pred = head;</span><br><span class="line">        for(int i = 0; i &lt; index; i++)&#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        pred.next = pred.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 题解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>203.移除链表元素</title>
       <link href="/posts/10614.html"/>
       <url>/posts/10614.html</url>
