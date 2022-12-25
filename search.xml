@@ -204,6 +204,25 @@
     </entry>
     
     
+    
+    <entry>
+      <title>java static 关键字</title>
+      <link href="/posts/36808.html"/>
+      <url>/posts/36808.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>static关键字</p><p>​写作业的时候出错了，原因是对static的理解有问题（或者说是根本没有理解），今天就来整理一下static的作用跟用法</p><p>​static作用，修饰类的成员变量，成员方法以及代码块，被修饰的成员被成为静态成员</p><p>​<strong>静态变量</strong>：<strong>使用static修饰的成员变量</strong>，成为静态变量或类变量，<strong>他被类的所有对象共享</strong>（类似全局变量，不被某个对象所独有，每个对象都可对其进行修改）</p><p>​<strong>静态方法</strong>：使用static修饰的在某个类中的方法可以被<strong>直接调用而不需要创建某个具体的对象</strong>（不需依附实例即可使用）。作用，不需要创建对象就可以使用的方法</p><p>​在静态方法中不能访问类的非静态成员变量和非静态类成员方法，但在非静态成员方法中是可以访问静态成员方法和变量</p><p>​<strong>静态代码块</strong>（优化程序性能）：代码块可分为普通代码块，构造代码块，和同步代码块（在多线程部分）执行的优先级高于非静态的初始代码块，他会在<strong>类的初始化时执行一次，执行完成便销毁</strong>，仅能初始化类变量，static块可以置于类中的任何地方，类中可以有多个static块。在类初次被加载的时候，会按照static块的顺序来依次执行每个static块，并且只会执行一次。无论类的对象被创建多少次，由于Java虚拟机只加载一次类，所以静态代码只会执行一次</p><p>我的误区：java中的变量不会影响到被修饰的东西的作用域，在Java中能影响访问权限的只有private，public，protect。虽然对于静态方法来说没有this，但是我们在非静态方法中能够通过this访问静态方法成员变量。</p><p>​this 关键字（指向调用对象本身）</p><p>​作用，解决成员变量和局部变量名称相同的问题</p><p>1.通过this关键字调用成员变量解决与局部变量名称冲突的问题</p><p>2.通过this关键字调用成员方法，方法用static修饰则不能用this（静态方法没有this，可随处调用，并不依附与某个对象）</p><p>3.this关键字调用的构造方法可以在一个构造方法中使用”this（[参数]，[参数],……）“的形式来调用构造方法S</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂文 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
   
   
 </search>
