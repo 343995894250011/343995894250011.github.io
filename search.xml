@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>栈实现队列</title>
+      <link href="/posts/18433.html"/>
+      <url>/posts/18433.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>​<a href="https://leetcode.cn/problems/implement-queue-using-stacks/"></a></p><p><img src="/posts/18433/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230126225518.png"></p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>栈是先进后出，并且进出只能从一端进行</p><p>队列是先进先出，一端进一段出，如果要用栈去模拟队列，创建两个开口方向不同的栈来实现，一个负责进一个负责出</p><p>进栈的时候</p><p><img src="/posts/18433/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230126225911.png"></p><p>出栈的时候先把元素全部转移到出栈里</p><p><img src="/posts/18433/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230126230028.png"></p><p>然后通过出栈实现pop</p><p><img src="/posts/18433/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230126230123.png"></p><p><strong>必须保证出栈为空才可转移进栈中的元素，否则会导致元素错位从而出栈顺序混乱</strong></p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>&#96;&#96;</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.util.Stack;</span><br><span class="line"></span><br><span class="line">class MyQueue &#123;</span><br><span class="line">    //队列是先进先出，栈是先进后出</span><br><span class="line"></span><br><span class="line">    //进栈，只负责进</span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    //出栈，只负责出</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line"></span><br><span class="line">    public MyQueue() &#123;</span><br><span class="line">        stackIn = new Stack&lt;&gt;();</span><br><span class="line">        stackOut = new Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void push(int x) &#123;</span><br><span class="line">        //正常压入即可</span><br><span class="line">        stackIn.push(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int pop() &#123;</span><br><span class="line">        //出栈的时候如果出栈不为空，则出栈继续出，如果出栈为空，把进栈里的东西全部转移到出栈里</span><br><span class="line">        pd();</span><br><span class="line">        return stackOut.pop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int peek() &#123;</span><br><span class="line">        //获取队头的元素</span><br><span class="line">        pd();</span><br><span class="line">        return stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public boolean empty() &#123;</span><br><span class="line">        //空的情况为两个队列都空才算空</span><br><span class="line">        return stackOut.isEmpty() &amp;&amp; stackIn.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void pd() &#123;</span><br><span class="line">        //如果出栈为空，把进栈的东西全部装到出栈里</span><br><span class="line">        if (!stackOut.isEmpty()) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            while (!stackIn.isEmpty()) &#123;</span><br><span class="line">                stackOut.push(stackIn.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>KMP</title>
       <link href="/posts/31301.html"/>
       <url>/posts/31301.html</url>
