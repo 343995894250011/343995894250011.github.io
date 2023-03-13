@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Java.sort | 嘟嘟可大骑士的技术日志</title><meta name="author" content="嘟嘟可大骑士"><meta name="copyright" content="嘟嘟可大骑士"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Arrays.sort()我觉得这个东西我得单独写一篇，为啥嘞，好用，强大，虽然不稳定 这是Java中一个用于对数组进行排序的方法，可以按照升序或降序的方式排序 该方法有多种重载形式，其中最常见的形式是传入一个数组作为参数，该数组将被按照默认升序排序方式进行排序 例如： int[] arr &#x3D; &amp;#123;3, 5, 6 , 2, 1&amp;#125;;  Arrays.sort(arr) 如果需要降序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java.sort">
+<meta property="og:url" content="http://example.com/posts/10609.html">
+<meta property="og:site_name" content="嘟嘟可大骑士的技术日志">
+<meta property="og:description" content="Arrays.sort()我觉得这个东西我得单独写一篇，为啥嘞，好用，强大，虽然不稳定 这是Java中一个用于对数组进行排序的方法，可以按照升序或降序的方式排序 该方法有多种重载形式，其中最常见的形式是传入一个数组作为参数，该数组将被按照默认升序排序方式进行排序 例如： int[] arr &#x3D; &amp;#123;3, 5, 6 , 2, 1&amp;#125;;  Arrays.sort(arr) 如果需要降序">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/top_img/10.jpg">
+<meta property="article:published_time" content="2023-03-13T09:26:26.000Z">
+<meta property="article:modified_time" content="2023-03-13T13:33:43.661Z">
+<meta property="article:author" content="嘟嘟可大骑士">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/top_img/10.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/10609"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java.sort',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-13 21:33:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/top_img/10.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">嘟嘟可大骑士的技术日志</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java.sort</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-13T09:26:26.000Z" title="发表于 2023-03-13 17:26:26">2023-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-13T13:33:43.661Z" title="更新于 2023-03-13 21:33:43">2023-03-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java.sort"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Arrays-sort"><a href="#Arrays-sort" class="headerlink" title="Arrays.sort()"></a>Arrays.sort()</h1><p>我觉得这个东西我得单独写一篇，为啥嘞，好用，强大，虽然不稳定</p>
+<p>这是Java中一个用于对数组进行排序的方法，可以按照升序或降序的方式排序</p>
+<p>该方法有多种重载形式，其中最常见的形式是传入一个数组作为参数，该数组将被按照默认升序排序方式进行排序</p>
+<p>例如：</p>
+<p><code>int[] arr = &#123;3, 5, 6 , 2, 1&#125;;  Arrays.sort(arr)</code></p>
+<p>如果需要降序排序，想办法反转数组即可</p>
+<p>该方法还可以对对象类型数组进行排序，但徐娅保证对象实现了Comparable接口或传入一个Comparator比较器对象作为参数</p>
+<p><code>实例</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class pg implements Comparable&lt;pg&gt; &#123;</span><br><span class="line">    int x;</span><br><span class="line">    int y;</span><br><span class="line">    public pg(int x, int y) &#123;</span><br><span class="line">        this.x = x;</span><br><span class="line">        this.y = y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public pg() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int compareTo(pg o) &#123;</span><br><span class="line">        return this.y - o.y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="对象数组排序"><a href="#对象数组排序" class="headerlink" title="对象数组排序"></a>对象数组排序</h2><p>该对象在实现接口之后就可以使用 Arrays.sort()对该对象数组进行排序，需要注意的是，该数组中不能含有非空引用（在这里报错了一次）对这个的解决方法是在排序之前先将数组中的空引用过滤掉，可以使用<code>Arrays.stream()</code>方法将数组转换成流，然后使用<code>filter()</code>方法过滤掉空引用，最后使用<code>toArray()</code>方法将流转换回数组即可，示例如下：</p>
+<p>&#96;&#96;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    YourObject[] arr = new YourObject[10];</span><br><span class="line">// 假设数组中有一些元素是 null</span><br><span class="line"></span><br><span class="line">    // 使用 Arrays.stream() 方法将数组转换成流，使用 filter() 方法过滤掉空引用，最后转换回数组</span><br><span class="line">    YourObject[] sortedArr = Arrays.stream(arr)</span><br><span class="line">            .filter(Objects::nonNull)</span><br><span class="line">            .sorted(/* 排序规则 */)</span><br><span class="line">            .toArray(YourObject[]::new);</span><br></pre></td></tr></table></figure>
+
+<p>实现Comparable接口的类必须保证compareTo()方法满足自反性，对称性和传递性</p>
+<p><img src="/posts/10609/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230313171553.png"></p>
+<h2 id="二维数组排序"><a href="#二维数组排序" class="headerlink" title="二维数组排序"></a>二维数组排序</h2><p>Arrays.sort()方法可以对一维数组进行排序，但不能直接对二维数组排序，但是我们可以通过实现Comparator接口或者Comparable接口来对二维数组进行排序</p>
+<p>首先，我们可以实现comparator接口，定义一个比较方法compare(),该方法接受两个参数，分别是待比较的两个数组，在该方法中，我们可以指定按照哪个元素进行比较。例如，假如有一个二维数组arr，包含若干个长度为2的一维数组，我们可以按照一维数组的第一个元素进行排序</p>
+<p>&#96;&#96;这个好</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int [] arr = &#123;&#123;1,2&#125;,&#123;3,1&#125;,&#123;1,2&#125;,&#123;3,1&#125;&#125;;</span><br><span class="line">Arrays.sort(arr, new Comparator&lt;int[]&gt;()</span><br><span class="line">        @Override</span><br><span class="line">        public int compare(int[] o1, int[] o2) &#123;</span><br><span class="line">            return o1[0] - o2[0];</span><br><span class="line">        &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>（不太懂）另外，如果二维数组的每个一维数组实现了Comparable接口，那么我们也可以使用Arrays.sort()方法对二维数组进行排序，在这种情况下，Arrays.sort()方法会自动调用每个以为数组的compareTo()方法进行排序</p>
+<p>&#96;&#96;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Pair implements Comparable&lt;Pair&gt; &#123;</span><br><span class="line"></span><br><span class="line">    int x;</span><br><span class="line">    int y;</span><br><span class="line"></span><br><span class="line">    public Pair(int x, int y) &#123;</span><br><span class="line">        this.x = x;</span><br><span class="line">        this.y = y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int compareTo(Pair o) &#123;</span><br><span class="line">        return this.x - o.x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&#96;&#96;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Pair[][] pairs = &#123;&#123;new Pair(1, 2), new Pair(3,1)&#125;, &#123;new Pair(5, 6), new Pair(8, 9)&#125;&#125;;</span><br><span class="line"></span><br><span class="line">Arrays.sort(pairs[0]);</span><br><span class="line">Arrays.sort(pairs[1]);</span><br><span class="line">Arrays.sort(pairs, new Comparator&lt;Pair[]&gt;() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public int compare(Pair[] o1, Pair[] o2) &#123;</span><br><span class="line">        return o1[0].x - o2[0].x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>Java中Arrays.sort()方法使用的是一种改进的快速排序算法（也称为双轴快速排序），该算法可以在最坏情况下以O(n log n)的时间复杂度完成排序，具有较好的性能。</p>
+<p>具体实现思路如下：</p>
+<ol>
+<li>对于数组中的元素，选择一个基准元素（pivot），通常可以选择第一个元素或者最后一个元素。</li>
+<li>定义两个指针，一个指向数组的开头（left），另一个指向数组的结尾（right）。</li>
+<li>从左向右扫描数组，找到第一个大于等于基准元素的元素。</li>
+<li>从右向左扫描数组，找到第一个小于等于基准元素的元素。</li>
+<li>如果left指针小于等于right指针，交换left和right位置上的元素，然后将left指针向右移动，right指针向左移动。</li>
+<li>重复3-5步骤，直到left指针大于right指针。</li>
+<li>将基准元素与right指针所在位置上的元素交换。</li>
+<li>对基准元素左侧的子数组和右侧的子数组分别进行递归排序，直到整个数组有序。</li>
+</ol>
+<p>需要注意的是，为了避免最坏情况下快速排序的时间复杂度退化到O(n^2)，Arrays.sort()方法还使用了一些优化技巧，如在数组大小较小时使用插入排序，以及在递归过程中使用堆排序等。</p>
+<p>&#96;&#96;</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">嘟嘟可大骑士</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/10609.html">http://example.com/posts/10609.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">嘟嘟可大骑士的技术日志</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/top_img/10.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/51619.html"><img class="next-cover" src="/img/top_img/10.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">移除元素</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">嘟嘟可大骑士</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Arrays-sort"><span class="toc-number">1.</span> <span class="toc-text">Arrays.sort()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">对象数组排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">二维数组排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text">实现原理</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/10609.html" title="Java.sort"><img src="/img/top_img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java.sort"/></a><div class="content"><a class="title" href="/posts/10609.html" title="Java.sort">Java.sort</a><time datetime="2023-03-13T09:26:26.000Z" title="发表于 2023-03-13 17:26:26">2023-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/51619.html" title="移除元素"><img src="/img/top_img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="移除元素"/></a><div class="content"><a class="title" href="/posts/51619.html" title="移除元素">移除元素</a><time datetime="2023-03-01T05:41:23.000Z" title="发表于 2023-03-01 13:41:23">2023-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/62292.html" title="递归计算行列式的值"><img src="/img/top_img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="递归计算行列式的值"/></a><div class="content"><a class="title" href="/posts/62292.html" title="递归计算行列式的值">递归计算行列式的值</a><time datetime="2023-02-21T23:10:56.000Z" title="发表于 2023-02-22 07:10:56">2023-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/16133.html" title="逆波兰表达式求值"><img src="/img/top_img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="逆波兰表达式求值"/></a><div class="content"><a class="title" href="/posts/16133.html" title="逆波兰表达式求值">逆波兰表达式求值</a><time datetime="2023-01-26T19:04:00.000Z" title="发表于 2023-01-27 03:04:00">2023-01-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/22431.html" title="删除相邻重复项"><img src="/img/top_img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="删除相邻重复项"/></a><div class="content"><a class="title" href="/posts/22431.html" title="删除相邻重复项">删除相邻重复项</a><time datetime="2023-01-26T19:03:58.000Z" title="发表于 2023-01-27 03:03:58">2023-01-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 嘟嘟可大骑士</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
