@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>PTA错题第二次收录</title>
+      <link href="/posts/59175.html"/>
+      <url>/posts/59175.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="嘟嘟可大骑士的犯二手册二"><a href="#嘟嘟可大骑士的犯二手册二" class="headerlink" title="嘟嘟可大骑士的犯二手册二"></a>嘟嘟可大骑士的犯二手册二</h2><p>没错新一期的错题集，这次在刷题的时候我对修改的不同版本的代码进行保存，通过比较自己的第一思路与修改后通过的的代码之间的不同来发现自己哪些地方犯二</p><h3 id="点赞"><a href="#点赞" class="headerlink" title="点赞"></a>点赞</h3><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317132515.png"></p><p>这个题目与2016年区域赛帅到没朋友非常相似，使用类似桶排的方法进行统计，然后遍历一次数组来确定答案，虽然并没有错但是当个典型题收集一下</p><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317132904.png"></p><p>使用了快读，复习快读基本用法</p><h3 id="古风排序"><a href="#古风排序" class="headerlink" title="古风排序"></a>古风排序</h3><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317134143.png"></p><p>这个题目相当有意思，我修改了两个版本的代码，两个代码之间只有一个区别，那就是是否对二维字符数组钟非原字符数组的部分进行初始化，虽然两者运行之后输出的答案一模一样，但是一个只能对三个测试点</p><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317134409.png" alt="未对数组空白部分进行初始化"></p><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317134437.png" alt="将数组空白部分打印为空格"></p><p>在Java中，如果一个char类型数组未被完全初始化，那么未被初始化的元素将被赋予默认值’\u0000’（null字符）。而在打印此元素时，可能会输出类似于空格的空白字符，因此上面两个代码在控制台中的输出看起来是一模一样的，然而实际上两个输出的值却并不相同</p><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317134954.png"></p><p>这个题目看起来简单，实际上也很简单，只不过这个是我第一用快读尝试字符数字的混合读取，而且似乎让我找到了读取单个字符的方法</p><p><img src="/posts/59175/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230317135104.png"></p><p>只不过这个提醒了我现在依然存在的一个问题，那对这些输入输出的使用，原理，可以读取哪些内容，怎样读取这些内容还是不够熟悉。相当有必要认真学一下BuffereReader这个类</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PTA错题第一次收录</title>
       <link href="/posts/24812.html"/>
       <url>/posts/24812.html</url>
