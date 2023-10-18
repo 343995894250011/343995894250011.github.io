@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>一些数学</title>
+      <link href="/posts/31619.html"/>
+      <url>/posts/31619.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="能被-n-整除的性质"><a href="#能被-n-整除的性质" class="headerlink" title="能被 n 整除的性质"></a>能被 n 整除的性质</h1><p>性质1：如果数a、b都能被c整除，那么它们的和（a+b）或差(a－b)也能被c整除。</p><p>性质2：几个数相乘，如果其中有一个因数能被某一个数整除，那么它们的积也能被这个数整除。</p><p>能被2整除的数，****个位上的数****能被2整除（偶数都能被2整除），那么这个数能被2整除</p><p>能被3整除的数，****各个数位上的数字和****能被3整除，那么这个数能被3整除</p><p>能被4整除的数，****个位和十位所组成的两位数****能被4整除，那么这个数能被4整除</p><p>能被5整除的数，<strong>个位上为0或5的数</strong>都能被5整除，那么这个数能被5整除</p><p>能被6整除的数，<strong>各数位上的数字和</strong>能被3整除的<strong>偶数</strong>，如果一个数既能被2整除又能被3整除，那么这个数能被6整除</p><p>能被7整除的数，<strong>若一个整数的个位数字截去，再从余下的数中，减去个位数的2倍，如果差是7的倍数</strong>，则原数能被7整除。如果差太大或心算不易看出是否7的倍数，就需要继续上述「截尾、倍大、相减、验差」的过程，直到能清楚判断为止。例如，判断133是否7的倍数的过程如下：13－3×2＝7，所以133是7的倍数；又例如判断6139是否7的倍数的过程如下：613－9×2＝595 ， 59－5×2＝49，所以6139是7的倍数，余类推。</p><p>能被8整除的数**<em>*，*</em>*<em>一个整数的末3位*<em>若能被8整除，则该数一定能被8整除。</em></em></p><p>能被9整除的数，<strong>各个数位上的数字和</strong>能被9整除，那么这个数能被9整除</p><p>能被10整除的数，<strong>如果一个数既能被2整除又能被5整除</strong>，那么这个数能被10整除（即个位数为零）</p><p>能被11整除的数，<strong>奇数位</strong>（从左往右数）上的<strong>数字和</strong>与偶数位上的数字和之<strong>差</strong>（大数减小数）能被11整除，则该数就能被11整除。 11的倍数检验法也可用上述检查7的「割尾法」处理！过程唯一不同的是：倍数不是2而是1！<br>能被12整除的数，若一个整数能被3和4整除，则这个数能被12整除</p><p>能被13整除的数，若一个整数的个位数字截去，再从余下的数中，加上个位数的4倍，如果差是13的倍数，则原数能被13整除。如果差太大或心算不易看出是否13的倍数，就需要继续上述「截尾、倍大、相加、验差」的过程，直到能清楚判断为止。</p><p>能被17整除的数，若一个整数的个位数字截去，再从余下的数中，减去个位数的5倍，如果差是17的倍数，则原数能被17整除。如果差太大或心算不易看出是否17的倍数，就需要继续上述「截尾、倍大、相减、验差」的过程，直到能清楚判断为止。</p><p>  另一种方法：若一个整数的末三位与3倍的前面的隔出数的差能被17整除，则这个数能被17整除</p><p>能被19整除的数，若一个整数的个位数字截去，再从余下的数中，加上个位数的2倍，如果差是19的倍数，则原数能被19整除。如果差太大或心算不易看出是否19的倍数，就需要继续上述「截尾、倍大、相加、验差」的过程，直到能清楚判断为止。</p><p>另一种方法：若一个整数的末三位与7倍的前面的隔出数的差能被19整除，则这个数能被19整除</p><p>能被23整除的数，若一个整数的末四位与前面5倍的隔出数的差能被23(或29)整除，则这个数能被23整除</p><p>能被25整除的数，十位和个位所组成的两位数能被25整除。</p><p>能被125整除的数，百位、十位和个位所组成的三位数能被125整除。</p><h1 id="互质的数的特点"><a href="#互质的数的特点" class="headerlink" title="互质的数的特点"></a>互质的数的特点</h1><p>（1）两个不相同的质数一定是互质数。如：7和11、17和31是互质数。<br>（2）两个连续的自然数一定是互质数。如：4和5、13和14是互质数。<br>（3）相邻的两个奇数一定是互质数。如：5和7、75和77是互质数。<br>（4）1和其他所有的自然数一定是互质数。如：1和4、1和13是互质数。<br>（5）2和任意一个奇数都是互质数。如2和1、2和9都是互质数。<br>（6）一个奇数和因数只有2的偶数都是互质数。如9和4、3和8都是互质数。<br>（7）两个数中的较大一个是质数，这两个数一定是互质数。如：3和19、16和97是互质数。<br>（8）两个数中的较小一个是质数，而较大数是合数且不是较小数的倍数，这两个数一定是互质数。如：2和15、7和54是互质数。<br>（9）较大数比较小数的2倍多1或少1，这两个数一定是互质数。如：13和27、13和25是互质数。</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul><li><p>k &#x3D; q^p 给定 k 求 q + p 的最大值 —— p 必定为 1</p></li><li><p>若两个数相等，那么因式分解后的质因子的种类和数量一定对应一致，对于一组数据，如果我们能通过 * 某些质数使他们变得相等，他们他们连续除以该质数所剩的因子也应该相等</p></li><li><p>连续三个自然数的乘积一定是 6 的倍数</p></li></ul><h1 id="一些题目"><a href="#一些题目" class="headerlink" title="一些题目"></a>一些题目</h1><p>游游拿到了一个正整数n，她准备将n拆分成两个<strong>正整数</strong>a和b，满足a+b&#x3D;n且a∗b是3的倍数。你能告诉游游有多少种拆分方式吗？</p><p>如果 a * b 为 3的倍数，那么 a b 之中一定有一个数为 3 的倍数</p><p>如果 n 是 3 的倍数，那么拆分之后两个数 a b 一定同为 3 的倍数，如果 n 不是三的倍数，那么拆分之后一定只有一个数为 3 的倍数</p><p>a + b &#x3D; n;</p><p>(a + b) % 3 &#x3D; n % 3</p><p>如果 n % 3 &#x3D;&#x3D; 0;</p><p>那么 a % 3 &#x3D;&#x3D; b % 3 &#x3D;&#x3D; n % 3 &#x3D;&#x3D; 0</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue双向绑定原理</title>
+      <link href="/posts/56496.html"/>
+      <url>/posts/56496.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Vue双向绑定原理"><a href="#Vue双向绑定原理" class="headerlink" title="Vue双向绑定原理"></a>Vue双向绑定原理</h1><p><img src="/posts/56496/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20231012135033.png"></p><p><code>new MVVM()</code> —— <code>new Vue()</code> 创建一个Vue对象</p><p><code>observer</code>(观察者)，劫持监听所有属性</p><p><code>Object.defineProperty（）</code> 直接在对象上定义一个新属性，或修改对象撒谎给你的现有属性，并返回该对象</p><p>对象中目前存在的属性描述符主要有两种主要形式：数据描述符和存取描述符，数据描述符是一个拥有可写或不可写值的属性。存取描述符是由一对 getter - setter 函数功能来描述的属性。描述符必须是两种形式之一，不能同时是两者</p><p>先创建一个发布者类，对data对象里面数据进行遍历并全部加上发布者模式</p><p>observe 的 set 方法可以通知变化给 dep , dep 继续通知给 watcher </p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;text&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>vue双向绑定原理，对于插值表达式来说，这就是一个watcher 对象，上面的html 中有两个 title 所以需要用dep 包裹起来（添加订阅者）当数据发生了变化可以同时 dep 更新视图<p>视图上的每个watcher 是个订阅者，每个watcher都对应一个 dep(watcher集合)，当数据改变直接通知dep ，dep 会通知所有 watcher 更新视图</p><p>在 complile 阶段 解析模板指令，并替换模板数据，初始化视图，将模板指令对应的结点绑定对应的更新函数</p><p>compile阶段解析html模板，第一次解析的时候会更新视图（数据的值直接更新到视图中） ，并初始化了watcher对象，初始化的时候做了啥，把watcher强制加入Dep里面，Dep你可以理解是一个装watcher的集合，每个watcher里面有个update方法可以更新视图，当ViewModel数据改变的时候会触发set方法，比较新的值和旧值是否相等，如果不相等，通知Dep，然后Dep会遍历每个watcher对象并执行watcher的update方法更新视图，反之，当视图发生改变（input输入），可以通过监听事件来获取视图的值，然后比较比较新的值和旧值是否相等，如果不相等，把新值赋值给ViewModel，然后ViewModel数据改变的时候又会触发set方法，重复上面的步骤更新视图</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git</title>
       <link href="/posts/25246.html"/>
       <url>/posts/25246.html</url>
